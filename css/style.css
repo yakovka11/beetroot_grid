@@ -1,0 +1,559 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main {
+    background: url("../img/main-bg.png");
+    background-size: cover;
+    color: #fefefb;
+    min-height: 100vh;
+}
+
+.wrapper {
+    max-width: 1140px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.container-main {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(65px, 2fr));
+    grid-template-rows: 1fr 7fr;
+    grid-template-areas: "header header" "title title";
+}
+
+.header {
+    position: relative;
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    vertical-align: middle;
+}
+
+.main-title {
+    grid-area: title;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub-title {
+    text-align: center;
+}
+
+.sub-title h1 {
+    font-size: 72px;
+    font-weight: bold;
+    padding-bottom: 40px;
+}
+
+.sub-title h4 {
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 100;
+}
+
+.nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin-left: 28px;
+}
+
+.nav ul li a {
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.nav-mobile {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    text-align: right;
+}
+.nav-mobile ul {
+    display: none;
+    background-color: rgba(209, 208, 217, 0.65);
+    padding: 20px;
+    border-radius: 10px;
+}
+.nav-mobile ul li {
+    list-style: none;
+}
+
+.nav-mobile ul li a {
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.about-us {
+    background-color: #ebebeb;
+}
+
+.container-about-us {
+    display: grid;
+    grid-template-columns: 35% 55%;
+    grid-template-rows: 100%;
+    grid-column-gap: 10%;
+    padding: 120px 0;
+}
+
+.about-us-image {
+    position: relative;
+    background: url("../img/about-us.png") no-repeat;
+    background-size: contain;
+}
+
+.image-text {
+    padding-top: 65px;
+    text-align: center;
+    font-size: 36px;
+    color: #fefbfc;
+}
+
+.about-us-info {
+    padding: 70px 0 100px 30px;
+    text-align: center;
+}
+
+.about-us-info p {
+    font-size: 20px;
+    color: #665f60;
+    text-align: left;
+}
+
+.about-us-info p:nth-of-type(2) {
+    padding-bottom: 90px;
+}
+
+.about-us-info button {
+    font-size: 20px;
+    color: #7d7a7c;
+    font-style: italic;
+    padding: 15px 45px;
+    border: 1px solid #7d7a7c;
+    background-color: transparent;
+}
+
+.container-icons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "small small big" "small small big";
+}
+
+.small-icons {
+    grid-area: small;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.small-icon {
+    text-align: center;
+    padding: 90px 0;
+}
+
+.small-icon img {
+    margin-bottom: 28px;
+}
+
+.small-icon p {
+    font-size: 24px;
+    color: #665f60;
+    font-weight: bold;
+}
+
+.small-icon p:nth-of-type(2) {
+    font-size: 18px;
+    font-style: italic;
+    padding-top: 22px;
+    font-weight: 100;
+}
+
+.small-icon:nth-of-type(1),
+.small-icon:nth-of-type(4) {
+    background-color: #dbdbdb;
+}
+
+.big-icon {
+    grid-area: big;
+    text-align: center;
+    padding-top: 115px;
+    background: url("../img/big-icon-bg.png");
+}
+
+.big-icon p {
+    color: #fefcfd;
+    font-size: 36px;
+}
+
+.big-icon p:nth-of-type(2) {
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 100;
+    padding-top: 115px;
+    width: 85%;
+    margin: auto;
+}
+
+.recent-works {
+    background: url("../img/Bg.png") no-repeat;
+    background-size: cover;
+    padding: 45px 0 60px 0;
+    text-align: center;
+}
+
+.recent-works-title h3 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fefcfd;
+    padding: 30px 0 65px 0;
+}
+
+.slider-container {
+    position: relative;
+}
+
+.slick-slide img {
+    margin: auto;
+}
+
+.dots {
+    padding-top: 45px;
+}
+
+.dots li {
+    list-style: none;
+    display: inline-block;
+    margin: 5px;
+}
+
+.dots li button {
+    list-style: none;
+    background-color: transparent;
+    background: url("../img/dot.png") no-repeat;
+    background-size: contain;
+    border: none;
+    width: 15px;
+    height: 15px;
+    text-indent: -99999px;
+    outline: none;
+}
+
+.dots li.slick-active button {
+    background-image: url("../img/dot-active.png");
+}
+
+.prev,
+.next,
+.next-team,
+.prev-team {
+    position: absolute;
+    top: 0;
+    bottom: 30px;
+    margin: auto;
+    background-color: transparent;
+    border: none;
+    height: 30px;
+    outline: none;
+}
+
+.prev,
+.prev-team {
+    left: -50px;
+}
+
+.next,
+.next-team {
+    right: -50px;
+}
+
+.our-team {
+    text-align: center;
+    padding: 50px 0 100px 0;
+    background-color: #ebebeb;
+}
+
+.our-team-title h3 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #665f60;
+    padding: 30px 0 65px 0;
+}
+
+.slider-team-container {
+    position: relative;
+}
+
+.user {
+    position: relative;
+    background-color: #FFFFFF;
+    text-align: center;
+    margin: 15px;
+}
+
+.user > img {
+    position: absolute;
+    top: -135px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.user-info {
+    padding-top: 160px;
+    margin-top: 130px;
+}
+
+.user-info p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #9f9acf;
+    padding-bottom: 30px;
+}
+
+.user-info span {
+    display: block;
+    font-size: 24px;
+    color: #665f60;
+    font-style: italic;
+    margin-bottom: 37px;
+}
+
+.user-info .social {
+    background-color: #9f9acf;
+    padding: 18px 0;
+}
+
+.user-info .social a {
+    display: inline-block;
+    margin: 0 6px;
+}
+
+.get-in-touch {
+    overflow-x: hidden;
+    position: relative;
+    background: url("../img/map-bg.png") no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding: 60px 0 55px 0;
+}
+
+.get-in-touch-title h3 {
+    font-size: 36px;
+    color: #FFFFFF;
+    padding: 24px 0 265px 0;
+}
+
+.get-in-touch-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 55px 200px 125px;
+    grid-row-gap: 25px;
+    grid-column-gap: 30px;
+    grid-template-areas: "text email" "textarea textarea" "button button";
+}
+
+.get-in-touch-form-text {
+    grid-area: text;
+}
+
+.get-in-touch-form-email {
+    grid-area: email;
+}
+
+.get-in-touch-form-textarea {
+    grid-area: textarea;
+    padding-top: 29px;
+}
+
+.get-in-touch-button {
+    grid-area: button;
+    width: 295px;
+    height: 65px;
+    border: none;
+    border-radius: 5px;
+    background-color: #9f9acf;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 5px 3px #8783b0;
+    margin: auto;
+}
+
+.get-in-touch-form-text,
+.get-in-touch-form-email,
+.get-in-touch-form-textarea {
+    background-color: rgba(232, 230, 240, 0.6);
+    border: none;
+    border-radius: 7px;
+    outline: none;
+    padding-left: 29px;
+}
+
+.get-in-touch-form-text::placeholder,
+.get-in-touch-form-email::placeholder,
+.get-in-touch-form-textarea::placeholder {
+    font-size: 18px;
+    font-style: italic;
+    color: #FFFFFF;
+    font-weight: 100;
+}
+
+.address-icon,
+.mobile-icon {
+    position: absolute;
+    right: 0;
+    display: flex;
+    transform: translateX(260px);
+    transition: 0.3s
+}
+
+.address-icon {
+    top: 90px;
+    height: 90px;
+    vertical-align: middle;
+}
+
+.mobile-icon {
+    top: 180px;
+    height: 90px;
+}
+
+.address-icon .icon,
+.mobile-icon .icon {
+    background-color: #9f9acf;
+    width: 90px;
+    height: 90px;
+}
+
+.address-icon .icon img,
+.mobile-icon .icon img {
+    padding-top: 28px;
+    vertical-align: top;
+}
+
+.address-icon .info-text,
+.mobile-icon .info-text {
+    width: 260px;
+    font-size: 18px;
+    color: #787274;
+    background-color: rgba(232, 230, 240, 0.6);
+    height: 100%;
+    padding: 15px 45px;
+}
+
+.address-icon:hover,
+.mobile-icon:hover {
+    transform: translateX(0);
+}
+
+footer {
+    background-color: #9f9acf;
+    padding: 75px 0;
+}
+
+footer > .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100%;
+}
+
+.copyright {
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+footer .social {
+    text-align: right;
+}
+
+footer .social a {
+    margin-left: 25px;
+}
+
+@media screen and (max-width: 1230px) {
+    .prev,
+    .next,
+    .next-team,
+    .prev-team {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 745px) {
+    .nav {
+        display: none;
+    }
+    .nav-mobile {
+        display: block;
+    }
+    .nav-mobile:hover ul {
+        display: block;
+    }
+    .container-icons-grid {
+        grid-template-areas: "small small small" "small small small";
+    }
+    .big-icon {
+        display: none;
+    }
+    .address-icon,
+    .mobile-icon {
+        display: none;
+    }
+    .get-in-touch-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 3fr 2fr;
+        grid-row-gap: 25px;
+        grid-column-gap: 30px;
+        grid-template-areas: "text text" "email email" "textarea textarea" "button button";
+    }
+    footer>.wrapper {
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr;
+        grid-row-gap: 20px;
+        text-align: center;
+    }
+    footer .social {
+        text-align: center;
+    }
+}
+@media screen and (max-width: 490px) {
+    .container-icons-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "small" "small" "small" "small";
+    }
+    .small-icons {
+        grid-area: small;
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: 100%;
+    }
+    .container-about-us {
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 2fr;
+        grid-column-gap: 10%;
+        padding: 120px 0;
+    }
+    .main-title .sub-title h1 {
+        font-size: 30px;
+    }
+    .main-title .sub-title h4 {
+        font-size: 24px;
+    }
+}
